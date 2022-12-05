@@ -6,14 +6,20 @@ import pickle
 
 application = Flask(__name__)
 
-# Home page
+
 @application.route('/')
 def home():
-    return "<h1>Welcome to Fake News Detector.</h1>"
+    """
+    Show home page.
+    """
+    return "Welcome to Fake News Detector."
 
-# Fake news detector model
+
 @application.route('/detector', methods=['GET'])
 def detector():
+    """
+    Fake news detector model
+    """
     # get input
     text = request.args.get('text')
 
@@ -30,14 +36,14 @@ def detector():
     with open('./models/count_vectorizer.pkl', 'rb') as vd:
         vectorizer = pickle.load(vd)
 
-    pred = model.predict(vectorizer.transform([text]))[0]
-    pred = 0 if pred == "REAL" else 1
+    output = model.predict(vectorizer.transform([text]))[0]
+    output = 0 if output == "REAL" else 1
     
-    result = {
+    response = {
         "status_code": 200,
-        "pred": pred
+        "output": output
     }
-    return result
+    return response
 
 
 if __name__ == '__main__':
