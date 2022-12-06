@@ -5,9 +5,9 @@
 | “Mark Zuckerberg is unveiled to be an alien.”     | 1     |   1| 118|
 
 ## Test 2
-| Test Input      | Expected Response | Actual Response ｜ Average Latency Over 100 Calls ｜
-| ----------- | ----------- |----------- | ----------- |
-| “UofT has changed its full name to University of Tears.”     | 1     |   1| 121|
+| Test Input                                                | Expected Response | Actual Response | Average Latency Over 100 Calls |
+| --------------------------------------------------------- | ----------------- |-----------------| ------------------------------ |
+| “UofT has changed its full name to University of Tears.”  | 1                 |   1             | 121                            |
 
 ## Test 3
 | Test Input      | Expected Response | Actual Response ｜ Average Latency Over 100 Calls ｜
