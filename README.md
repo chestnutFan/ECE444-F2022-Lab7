@@ -1,4 +1,5 @@
 # ECE444-F2022-Lab7 
+Deployed a machine learning model to the cloud using AWS Elastic Beanstalk. Input a sentence and the API will judge whether it's fake news or not (return 0 if real, and 1 if fake).
 ## Test 1
 | Test Input                                                | Expected Response | Actual Response | Average Latency Over 100 Calls |
 | --------------------------------------------------------- | ----------------- |-----------------| ------------------------------ |
