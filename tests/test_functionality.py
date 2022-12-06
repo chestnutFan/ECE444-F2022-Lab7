@@ -7,7 +7,7 @@ def test_case1():
     Expected Result: 1
     """
     tester = application.test_client()
-    response = tester.get("http://flask-env1.eba-9b9f2p8a.us-east-2.elasticbeanstalk.com/detector?text=Mark Zuckerberg is unveiled to be an alien")
+    response = tester.get("/detector?text=Mark Zuckerberg is unveiled to be an alien")
 
     assert response.status_code == 200
     assert response.output == 1
@@ -20,7 +20,7 @@ def test_case2():
     Expected Result: 1
     """
     tester = application.test_client()
-    response = tester.get("http://flask-env1.eba-9b9f2p8a.us-east-2.elasticbeanstalk.com/detector?text=UofT has changed its full name to University of Tears")
+    response = tester.get("/detector?text=UofT has changed its full name to University of Tears")
 
     assert response.status_code == 200
     assert response.output == 1
@@ -34,7 +34,7 @@ def test_case3():
     """
 
     tester = application.test_client()
-    response = tester.get("http://flask-env1.eba-9b9f2p8a.us-east-2.elasticbeanstalk.com/detector?text=The Federal Reserve will continue to raise interest rates in 2023")
+    response = tester.get("/detector?text=The Federal Reserve will continue to raise interest rates in 2023")
 
     assert response.status_code == 200
     assert response.output == 0
@@ -47,7 +47,7 @@ def test_case4():
     Expected Result: 0
     """
     tester = application.test_client()
-    response = tester.get("http://flask-env1.eba-9b9f2p8a.us-east-2.elasticbeanstalk.com/detector?text=Salesforce Co-CEO Bret Taylor is going to step down")
+    response = tester.get("/detector?text=Salesforce Co-CEO Bret Taylor is going to step down")
 
     assert response.status_code == 200
     assert response.output == 0
